@@ -1,12 +1,14 @@
-import Link from "next/link"
+import { Box, Heading, Link, Text } from "@chakra-ui/react"
 
 export default function PostListItem({ postData }: { postData: any }) {
   return (
-    <div>
-      <Link href={postData.post_url}>
-        <a>{postData.title}</a>
+    <Box>
+      <Heading>
+      <Link fontSize="xl" href={postData.post_url}>
+        {postData.title}
       </Link>
-      <p>{postData.content}</p>
-    </div>
+      </Heading>
+      <Text>{postData.created_at}</Text>
+    </Box>
   )
 }
