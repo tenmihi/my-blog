@@ -1,0 +1,6 @@
+posts:
+  list_limit: 10
+  types:
+    - dev
+    - game
+    - airsoft

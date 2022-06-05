@@ -24,7 +24,7 @@ export function getPost(type: string, year: number, month: number, day: number):
   // https://github.com/jonschlinkert/gray-matter/issues/62
   const post_matter = matter(post_file, {
     engines: {
-      yaml: s => yaml.load(s, { schema: yaml.JSON_SCHEMA })
+      yaml: s => yaml.load(s, { schema: yaml.JSON_SCHEMA }) as object
     }
   })
 
