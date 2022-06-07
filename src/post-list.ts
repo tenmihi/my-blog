@@ -58,4 +58,5 @@ export function getPostList(type: string, page: number): object[] {
         ...post_matter.data
       }
     })
+    .sort((a, b) => a.post_url < b.post_url ? 1 : -1)
 } 
