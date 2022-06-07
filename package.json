@@ -20,7 +20,10 @@
     "markdown-it": "^13.0.1",
     "next": "12.1.6",
     "react": "18.1.0",
-    "react-dom": "18.1.0"
+    "react-dom": "18.1.0",
+    "zenn-content-css": "^0.1.110",
+    "zenn-embed-elements": "^0.1.110",
+    "zenn-markdown-html": "^0.1.110"
   },
   "devDependencies": {
     "@types/config": "^0.0.41",

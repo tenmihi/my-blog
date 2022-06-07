@@ -1,7 +1,7 @@
 import { Box, Container, Heading, Text } from "@chakra-ui/react";
 import Head from "next/head";
 import Header from "../../../../../component/header";
-import { getAllPaths, getPost } from "../../../../../src/posts";
+import { getAllPaths, getPost } from "../../../../../src/post";
 
 export function getStaticPaths() {
   const paths = getAllPaths()
@@ -35,6 +35,7 @@ export default function Post({ created_at, title, content }: { created_at: strin
       <Header />
       <Box
         as="article"
+        className="znc"
         mt={12}
         sx={{
           "*": {
