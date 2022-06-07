@@ -3,6 +3,7 @@ import path from 'path'
 import matter from 'gray-matter'
 import * as globule from 'globule'
 import yaml from 'js-yaml'
+import MarkdownIt from 'markdown-it'
 
 const POSTS_ROOT_PATH = path.join(process.cwd(), 'posts')
 
@@ -28,8 +29,14 @@ export function getPost(type: string, year: number, month: number, day: number):
     }
   })
 
+  const md = MarkdownIt()
+  const content = md.render(post_matter.content)
+
+  const created_at = `${year}/${month}/${day}`
+
   return {
-    content: post_matter.content,
+    created_at,
+    content,
     ...post_matter.data
   }
 }

@@ -5,7 +5,6 @@ import * as globule from 'globule'
 import config from 'config'
 import yaml from 'js-yaml'
 import MarkdownIt from 'markdown-it'
-import { match } from 'globule'
 
 const POSTS_ROOT_PATH = path.join(process.cwd(), 'posts')
 

@@ -1,6 +1,7 @@
-import { Box, Container, Text, Heading } from '@chakra-ui/react'
+import { Box, Container } from '@chakra-ui/react'
 import Head from 'next/head'
-import PostListItem from "../../src/component/post-list-item"
+import PostListItem from "../../component/post-list-item"
+import Header from '../../component/header'
 import { getAllPaths, getPostList } from "../../src/post-list"
 
 interface RouteParams {
@@ -29,18 +30,13 @@ export async function getStaticProps({ params }: { params: RouteParams }) {
 
 export default function PostList({ post_list }: { post_list: object[] }) {
   return (
-    <Container maxW={'7xl'} p="12">
+    <Container maxW={'80%'} p="12">
       <Head>
         <title>tenmihi's blog</title>
         <meta name="description" content="主に開発周りについて" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Box>
-        <Heading as="h2">tenmihi's blog</Heading>
-        <Text fontSize='xl'>
-          主に開発周りについて
-        </Text>
-      </Box>
+      <Header />
       <Box
         marginTop={{ base: '1', sm: '5' }}
         display="flex"
