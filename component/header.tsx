@@ -1,14 +1,20 @@
-import { Box, Heading, Text, Link } from "@chakra-ui/react";
+import { Box, Heading, Text, Link, forwardRef, BoxProps } from "@chakra-ui/react";
+import Profile from "./profile";
 
-export default function Header() {
+const Header = forwardRef<BoxProps, 'div'>((props, ref) => {
   return (
-    <Box>
+    <Box ref={ref} {...props}>
       <Link href="/">
         <Heading as="h2">tenmihi's blog</Heading>
       </Link>
-      <Text fontSize='xl'>
-        主に開発周りについて
+      <Text
+        mb="16px"
+        fontSize='xl'>
+        主にJS, TSについて
       </Text>
+      <Profile imagePath='/my-avatar.png' />
     </Box>
   )
-}
+})
+
+export default Header

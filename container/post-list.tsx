@@ -5,22 +5,21 @@ import PostListItem from "../component/post-list-item";
 
 export default function PostList({ post_list }: { post_list: object[] }) {
   return (
-    <Container maxW={'80%'} p="12">
+    <Container maxW={'70%'} p="12">
       <Head>
         <title>tenmihi's blog</title>
         <meta name="description" content="主に開発周りについて" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header />
+      <Header 
+        mb="32px"/>
       <Box
-        marginTop={{ base: '1', sm: '5' }}
         display="flex"
-        justifyContent="space-between"
-        flexDirection={{ base: 'column', sm: 'column' }}>
+        flexDirection="column">
           {
             post_list.map(post => (
               <Box
-                marginBottom={{ base: '8', sm: '8' }}>
+                mb="16px">
                 <PostListItem postData={post} />
               </Box>
             ))
