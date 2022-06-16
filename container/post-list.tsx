@@ -7,7 +7,7 @@ export default function PostList({ post_list }: { post_list: object[] }) {
   return (
     <Container maxW={'70%'} p="12">
       <Head>
-        <title>tenmihi's blog</title>
+        <title>blog.tenmihi.dev</title>
         <meta name="description" content="主に開発周りについて" />
         <link rel="icon" href="/favicon.ico" />
       </Head>

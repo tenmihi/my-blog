@@ -28,7 +28,7 @@ export default function Post({ created_at, title, content }: { created_at: strin
   return (
     <Container maxW={'80%'} p="12">
       <Head>
-        <title>tenmihi's blog - FIXME</title>
+        <title>blog.tenmihi.dev</title>
         <meta name="description" content="主に開発周りについて" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
