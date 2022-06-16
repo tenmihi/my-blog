@@ -16,13 +16,15 @@ const Profile = forwardRef<BoxProps & ProfileProp, 'div'>((props, ref) => {
       <Box
         display="flex"
         flexDirection="column"
-        ml="8px">
-        <Heading as="h4" fontSize='md' mb="8px">tenmihi</Heading>
+        justifyContent="space-between"
+        ml="8px"
+        p="5px 0">
+        <Heading as="h4" fontSize='md'>tenmihi</Heading>
         <Box
           display="flex"
           flexDirection="row">
           <Twitter size="16px"/>
-          <Github size="16px" style={{ marginLeft: '8px' }}/>
+          <Github size="16px" style={{ marginLeft: '4px' }}/>
         </Box>
       </Box>
     </Box>

@@ -35,40 +35,13 @@ export default function Post({ created_at, title, content }: { created_at: strin
       <Header />
       <Box
         as="article"
-        className="znc"
         mt={12}
-        sx={{
-          "*": {
-            mb: 4,
-            listStyle: "none",
-          },
-          h1: { fontSize: "2xl", fontWeight: "bold" },
-          h2: { fontSize: "1xl", fontWeight: "bold" },
-          p: { fontSize: "md" },
-          blockquote: {
-            borderLeft: "3px solid",
-            borderColor: "gray.500",
-            pl: 4,
-          },
-          a: {
-            fontWeight: "bold",
-          },
-          li: {
-            mb: 2,
-          },
-          "pre code": {
-            borderRadius: 10,
-          },
-          img: {
-            w: "100%",
-            h: { base: 200, sm: 300, md: 400 },
-            objectFit: "cover",
-            borderRadius: 10,
-          },
-        }}>
+        >
         <p>{created_at}</p>
-        <Heading as="h1">{title}</Heading>
-        <Box dangerouslySetInnerHTML={{ __html: content }} />
+        <Heading as="h1" fontSize="3xl" mb="16px">{title}</Heading>
+        <Box
+          className="znc"
+          dangerouslySetInnerHTML={{ __html: content }} />
       </Box>
     </Container>
   )
